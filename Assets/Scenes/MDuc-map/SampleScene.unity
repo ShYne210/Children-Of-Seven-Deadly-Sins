@@ -327,43 +327,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce998c4ea10abbc4d85e78ab620da50e, type: 3}
---- !u!84 &51847801
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!4 &51974152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 698853646484336388, guid: 6e329e9ff38453f42b68576b54df9e32, type: 3}
@@ -754,15 +717,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.631845
+      value: -30.631784
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20151858
+      value: 0.55756617
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.311115
+      value: 37.30998
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -779,7 +742,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 711140795}
+      objectReference: {fileID: 1884751901}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1809,6 +1772,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2624671227268106405, guid: a5ac041b79f79364ca8481b503332787, type: 3}
   m_PrefabInstance: {fileID: 280248638}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &341836072
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &343111389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,43 +3097,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2091664934703083963, guid: a1863b03a6bd8c14fac2d1414ffd70a8, type: 3}
   m_PrefabInstance: {fileID: 1830487700}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &552064069
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!4 &554012482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4386577913257113127, guid: 29e903f64eb93ba42916d5f0f710532e, type: 3}
@@ -3551,43 +3514,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3875466374504303086, guid: 8e2341be90006d940b01905bd617a1e8, type: 3}
   m_PrefabInstance: {fileID: 682821073}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &672955003
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!4 &682551233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6456452478150315081, guid: 62db56cededaad44da3f56ced51d6274, type: 3}
@@ -3805,43 +3731,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1edf9e3bc24ee64e9f0d89274974393, type: 3}
---- !u!84 &711140795
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!4 &713838253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8683316804717818061, guid: 23696b12641c2d54a8bdaa31535a190b, type: 3}
@@ -4395,43 +4284,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7654587694275391097, guid: f4c9ea9c4ab0bf14a81c223af40e62b0, type: 3}
   m_PrefabInstance: {fileID: 991092461}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &876124805
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &881268984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4594,6 +4446,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2097292360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &903096500
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
+--- !u!84 &905960830
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &917115426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4839,43 +4765,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65835fdfb7e6f7643b6cbeacdc6d24a9, type: 3}
---- !u!84 &937678801
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &950019709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5604,43 +5493,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
---- !u!84 &1092691651
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &1096898731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7034,15 +6886,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.223558
+      value: 17.222427
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49965972
+      value: 0.8557073
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.216827
+      value: 38.21676
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7071,7 +6923,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 552064069}
+      objectReference: {fileID: 1845848163}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7176,6 +7028,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8230088851002256163, guid: 3e20fca3c99e79e478de1650318e27f1, type: 3}
   m_PrefabInstance: {fileID: 1084250698}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1392530368
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1393036395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7238,15 +7127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.386837
+      value: -19.386776
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20151858
+      value: 0.55756617
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.23713
+      value: 37.235992
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7263,7 +7152,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 51847801}
+      objectReference: {fileID: 341836072}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7550,19 +7439,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.339972
+      value: 17.33991
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8449006
+      value: 1.2009482
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.638549
+      value: -9.637421
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8786032
+      value: 0.878603
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7570,7 +7459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.47755256
+      value: -0.47755295
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -7591,7 +7480,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 672955003}
+      objectReference: {fileID: 1392530368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7731,15 +7620,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.580807
+      value: 27.579678
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49965972
+      value: 0.8557073
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.09349
+      value: 38.093426
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7768,7 +7657,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 876124805}
+      objectReference: {fileID: 903096500}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8451,6 +8340,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677798886}
   m_Mesh: {fileID: -8686270011590885455, guid: bdfb9d91fc0e6bf48b1cd9a12ea28487, type: 3}
+--- !u!84 &1680870507
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1690212523
 GameObject:
   m_ObjectHideFlags: 0
@@ -8963,19 +8889,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.993135
+      value: 27.993074
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8449006
+      value: 1.2009482
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.515333
+      value: -9.514202
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.878603
+      value: 0.8786032
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8983,7 +8909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.47755295
+      value: -0.47755256
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9004,7 +8930,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1092691651}
+      objectReference: {fileID: 1898848445}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9247,15 +9173,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4143195623689620296, guid: 7d0f4e26ed60a5143a42a1bdf36780e5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.927305
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4143195623689620296, guid: 7d0f4e26ed60a5143a42a1bdf36780e5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.8338532
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4143195623689620296, guid: 7d0f4e26ed60a5143a42a1bdf36780e5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.9704
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4143195623689620296, guid: 7d0f4e26ed60a5143a42a1bdf36780e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9416,6 +9342,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1267096765038360881, guid: 564fcda16ab9e1541bf0b602c86db5eb, type: 3}
   m_PrefabInstance: {fileID: 1941671418}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1845848163
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!4 &1857050236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3849171699990916794, guid: 7c525024ae8431e45b357520bb8407a6, type: 3}
@@ -9622,6 +9585,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879044220}
   m_Mesh: {fileID: -8686270011590885455, guid: bdfb9d91fc0e6bf48b1cd9a12ea28487, type: 3}
+--- !u!84 &1884751901
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
+--- !u!84 &1898848445
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MirrorFrame's RenderTexture.
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 748
+  m_Height: 748
+  m_AntiAliasing: 8
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 0
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 2
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1899665235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10563,15 +10600,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.29453
+      value: -23.293392
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49965972
+      value: 0.8557073
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.328507
+      value: -12.328494
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10604,7 +10641,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 2087173364}
+      objectReference: {fileID: 905960830}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10928,43 +10965,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303d3ba452d24564c9ef1c70c2ab3772, type: 3}
---- !u!84 &2087173364
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorFrame's RenderTexture.
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 748
-  m_Height: 748
-  m_AntiAliasing: 8
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 0
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 2
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &2097292359
 GameObject:
   m_ObjectHideFlags: 0
@@ -11188,15 +11188,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.62755
+      value: -34.626415
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49965972
+      value: 0.8557073
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.390734
+      value: -12.390729
       objectReference: {fileID: 0}
     - target: {fileID: 3190468708103644283, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11229,7 +11229,7 @@ PrefabInstance:
     - target: {fileID: 7459549573651673936, guid: bfdcc3c5c391452478f72ba4629e245d, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 937678801}
+      objectReference: {fileID: 1680870507}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
