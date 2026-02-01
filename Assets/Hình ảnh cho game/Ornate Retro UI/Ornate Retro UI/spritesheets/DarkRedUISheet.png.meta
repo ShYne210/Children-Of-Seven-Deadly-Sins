@@ -1,0 +1,1704 @@
+fileFormatVersion: 2
+guid: 38a0e82caac05f14281daad75adf16f7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DarkRedUISheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 132
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9519127b07f7a4c9f17289387f520b
+      internalID: 728320017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 180
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c4d8251e91ab441ba86a6bc54e6e22
+      internalID: -1089893225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169a1b2d80bb76b4db92a5afe99845bf
+      internalID: 455255538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 180
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d8da53b4706a44a88ab29016b3a07b
+      internalID: -424654829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 204
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f557cad17c7d4748aed57e914bea54d
+      internalID: 1984922259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 205
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9b0e40d94f5ef4fbb9bed66c797b07
+      internalID: 821382222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 205
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371894a7a04471e43a1703bbd25c5044
+      internalID: 974606847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_7
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 200
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342cad29896847244bb78373b2bd9e1f
+      internalID: 120428848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 217
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a9da6ea7ff9294faf028ab5eeefa4d
+      internalID: -292162459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_9
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 217
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93589e41e5eb4a45bceb6d5cac35f06
+      internalID: -1060330021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_10
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 217
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33f0e0b18e102149b61b15c5f7b2158
+      internalID: -935378717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_11
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 210
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772518d20bbafa44e8b9c0cdca0cb24b
+      internalID: -2112011247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_12
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 210
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822bb4268ff384348898d492d9c161d8
+      internalID: 353306565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_13
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 210
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6df9a82fe22a45458aa7daf58a6e1d9
+      internalID: -5213654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_14
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 203
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ec74900276e6f4bbc616ee859b0ec0
+      internalID: -1504368733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_15
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 203
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601301a649c434948a5b6b28478be1df
+      internalID: -1104579322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_16
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 203
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656c4a282b41bb54197a62cce82e2b9b
+      internalID: 1005989511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_17
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96aa0e274a596af4e8571dddafa9d8a4
+      internalID: -2054987667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_18
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf5176ef5386fd4692345974de57aab
+      internalID: 1795205847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_19
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbeb47dfc4334346a841b8ccb3d2ca2
+      internalID: -1063902703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_20
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 172
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdc7feca97550d4daf522485d7511c8
+      internalID: 353138139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_21
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 148
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b7a5a631bde0440a137d2e608abac4
+      internalID: 1123343133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 148
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec08a89d06f22940b6af085cf4311ca
+      internalID: -1175697846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_23
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 148
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc13cb4fda7a204b94a3970627afc58
+      internalID: 421921888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_24
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 138
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6e02c416d0c05448b7f617d2296d07
+      internalID: -982107980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_25
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 138
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569c01bd1b5f8e4468b99cbab4dbb26c
+      internalID: -1216271083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_26
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 138
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21ea76d943cd7542b0e31ba90641ed4
+      internalID: -58204508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_27
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 138
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619d4b00d283d1947a4fef6b52aab5a8
+      internalID: 1510966485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_28
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 121
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f9b7f62844f6647b5ad488beacc126
+      internalID: 1252523206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 122
+        width: 48
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95c8e7a88b42c04ba38a7fa31e7084f
+      internalID: -2123952278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_30
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 117
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8e86fa223d9494385952e9e8a4e453
+      internalID: -1729933850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 117
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd63e1ff47716944b4dfd11f32424c0
+      internalID: 1208783997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_32
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 121
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9569dd91547e4348a0e9a8179e6737d
+      internalID: -1591965347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 121
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bea37c1e688ee46a9a2f7ae832fd26
+      internalID: 294573693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_34
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 106
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9aeef1b2a8c16448b42dc19fb6d3dd6
+      internalID: 1062082889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_35
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 106
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19e14b4a86a5e443851c3c932466b57
+      internalID: 402272924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 107
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8937451fda0f44146b342a8df6baf588
+      internalID: -356009452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_37
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 106
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f6e0a95c7940647b5c898387f2a6a3
+      internalID: 1810282935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_38
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 107
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11f5ca0343d9bf45b5f41978e9f38da
+      internalID: 1134824685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_39
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 20
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddd5ab4886a9964f93134e20823d026
+      internalID: 1863654590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_40
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 103
+        width: 82
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e7d434e5a92a642bea0d30b8896679
+      internalID: 969024534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 105
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b754fe2aa4d7fa44f9f3965b2ed767a6
+      internalID: -1395035788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_42
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 56
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdedf5accd8be644abb82da85f5f48da
+      internalID: -2070367536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_43
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 105
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821b3a342ab00c64fbbd64997d79a448
+      internalID: -203489490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_44
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 68
+        width: 57
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8529c39d910443941a320b8caf1c38c9
+      internalID: 938058406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 68
+        width: 6
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245e2ddc0a2e42347a48ee41b155d1a2
+      internalID: 1420563850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_46
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 68
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2545acf56c726264c88fa7d24163d008
+      internalID: -1603214172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_47
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 68
+        width: 4
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ed73eba9fc4ed4d9a28c90418f7014
+      internalID: -772169064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_48
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 72
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ca1a25f40456147a939c7aae67d935
+      internalID: -1355820463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_49
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 73
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539ce25026e45814888d7cf3036b4ff7
+      internalID: 1127275651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_50
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 73
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5198faaa2d1bbb5469e8a8459cbdd8c5
+      internalID: 366132212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_51
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 72
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3821f7334ac55f349b2a59ca59ee87bc
+      internalID: 843538835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_52
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 73
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaf716954b365443b016034f23d962e
+      internalID: -828719396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_53
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 72
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fe372e01e0d254d96b554ca1a1564e
+      internalID: -1909687641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_54
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 72
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab622c0cae1f794a9243b5b0678c616
+      internalID: -2042158215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_55
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 56
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bac3f2c0979f14fbc960ed38ead8da
+      internalID: -143900558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_56
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 56
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae90fd3519de74c49853095eaf17e7a0
+      internalID: -670516036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_57
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 45
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d446d20a410fe41966436444e54232
+      internalID: 1257150659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_58
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 52
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6262834c39eb96c41aa3004b4ed365d8
+      internalID: 2116708092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_59
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 36
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eb08f5b696b804f8917bbd679a3621
+      internalID: -1722810094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_60
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 4
+        width: 14
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50d9caa85c4edb4b9fab4503dc9d9b8
+      internalID: -739490986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_61
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 45
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b297825c3428241946d84cff174153
+      internalID: 851612811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_62
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 42
+        width: 40
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35175c904cd8f443a5f76728f088237
+      internalID: 238092781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_63
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 29
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdbe5bc53ab97a498d40898d6483391
+      internalID: 1206454371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_64
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 30
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0160c851ad71bbd48bd6c508cdde9554
+      internalID: -590255314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_65
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 36
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da65123b5a9dfb84f875277c4bddf0aa
+      internalID: 667006179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_66
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 21
+        width: 96
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6dcf1b9f93874499c57446cc9ac352
+      internalID: 1601707003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_67
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 5
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dcb5d162f8c9748a6bb69c6d306acb
+      internalID: 1773051273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkRedUISheet_68
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 10
+        width: 44
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5a5e5a935215845b07997b0d8d8d5f
+      internalID: 718276589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 469606b6cd9df174bb9095addeeb0ed0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DarkRedUISheet_0: 728320017
+      DarkRedUISheet_1: -1089893225
+      DarkRedUISheet_10: -935378717
+      DarkRedUISheet_11: -2112011247
+      DarkRedUISheet_12: 353306565
+      DarkRedUISheet_13: -5213654
+      DarkRedUISheet_14: -1504368733
+      DarkRedUISheet_15: -1104579322
+      DarkRedUISheet_16: 1005989511
+      DarkRedUISheet_17: -2054987667
+      DarkRedUISheet_18: 1795205847
+      DarkRedUISheet_19: -1063902703
+      DarkRedUISheet_2: 455255538
+      DarkRedUISheet_20: 353138139
+      DarkRedUISheet_21: 1123343133
+      DarkRedUISheet_22: -1175697846
+      DarkRedUISheet_23: 421921888
+      DarkRedUISheet_24: -982107980
+      DarkRedUISheet_25: -1216271083
+      DarkRedUISheet_26: -58204508
+      DarkRedUISheet_27: 1510966485
+      DarkRedUISheet_28: 1252523206
+      DarkRedUISheet_29: -2123952278
+      DarkRedUISheet_3: -424654829
+      DarkRedUISheet_30: -1729933850
+      DarkRedUISheet_31: 1208783997
+      DarkRedUISheet_32: -1591965347
+      DarkRedUISheet_33: 294573693
+      DarkRedUISheet_34: 1062082889
+      DarkRedUISheet_35: 402272924
+      DarkRedUISheet_36: -356009452
+      DarkRedUISheet_37: 1810282935
+      DarkRedUISheet_38: 1134824685
+      DarkRedUISheet_39: 1863654590
+      DarkRedUISheet_4: 1984922259
+      DarkRedUISheet_40: 969024534
+      DarkRedUISheet_41: -1395035788
+      DarkRedUISheet_42: -2070367536
+      DarkRedUISheet_43: -203489490
+      DarkRedUISheet_44: 938058406
+      DarkRedUISheet_45: 1420563850
+      DarkRedUISheet_46: -1603214172
+      DarkRedUISheet_47: -772169064
+      DarkRedUISheet_48: -1355820463
+      DarkRedUISheet_49: 1127275651
+      DarkRedUISheet_5: 821382222
+      DarkRedUISheet_50: 366132212
+      DarkRedUISheet_51: 843538835
+      DarkRedUISheet_52: -828719396
+      DarkRedUISheet_53: -1909687641
+      DarkRedUISheet_54: -2042158215
+      DarkRedUISheet_55: -143900558
+      DarkRedUISheet_56: -670516036
+      DarkRedUISheet_57: 1257150659
+      DarkRedUISheet_58: 2116708092
+      DarkRedUISheet_59: -1722810094
+      DarkRedUISheet_6: 974606847
+      DarkRedUISheet_60: -739490986
+      DarkRedUISheet_61: 851612811
+      DarkRedUISheet_62: 238092781
+      DarkRedUISheet_63: 1206454371
+      DarkRedUISheet_64: -590255314
+      DarkRedUISheet_65: 667006179
+      DarkRedUISheet_66: 1601707003
+      DarkRedUISheet_67: 1773051273
+      DarkRedUISheet_68: 718276589
+      DarkRedUISheet_7: 120428848
+      DarkRedUISheet_8: -292162459
+      DarkRedUISheet_9: -1060330021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
