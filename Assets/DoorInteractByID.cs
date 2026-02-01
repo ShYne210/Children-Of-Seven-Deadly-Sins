@@ -15,14 +15,11 @@ public class DoorInteractByID : MonoBehaviour
 
     private void Awake()
     {
-        // Lấy đúng Rotatable theo ID
-        doorRotatable = rotatableObject
-            .GetComponentInChildren<Rotatable>();
+        doorRotatable = rotatableObject.GetComponentInChildren<Rotatable>();
     }
 
     private void Update()
     {
-        // UI chỉ để hiển thị
         if (pressEText != null)
             pressEText.SetActive(IsPlayerLookingAtDoor());
     }
