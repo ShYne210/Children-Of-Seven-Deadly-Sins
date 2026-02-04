@@ -636,75 +636,68 @@ MonoBehaviour:
   dialogPanel: {fileID: 800166671}
   choicePanel: {fileID: 373161391}
   dialogText: {fileID: 1814361098}
-  choiceText1: {fileID: 1750789886}
-  choiceText2: {fileID: 1289144634}
   btnNext: {fileID: 328931777}
   btnSkip: {fileID: 1506161811}
+  btnAuto: {fileID: 1799473375}
   btnChoice1: {fileID: 2064440367}
   btnChoice2: {fileID: 1304669202}
   dialogs:
-  - "???\n(\u2026)\n(T\u1ED1i qu\xE1\u2026)\n(Sao m\xECnh l\u1EA1i \u1EDF \u0111\xE2y?
-    \u0110\xE2y l\xE0 \u0111\xE2u?)"
-  - "???\n(Kh\xF4ng c\xF2n \u0111au\u2026)\n(Kh\xF4ng c\xF2n ti\u1EBFng h\xF2 reo\u2026)\n(Ph\xE1p
-    tr\u01B0\u1EDDng\u2026 \u0111\xFAng r\u1ED3i. M\xECnh \u0111ang \u1EDF ph\xE1p
-    tr\u01B0\u1EDDng x\u1EED b\u1EAFn.)"
-  - "???\n(Vi\xEAn \u0111\u1EA1n xuy\xEAn qua ng\u1EF1c.)\n(Kho\u1EA3nh kh\u1EAFc
-    \u0111\xF3\u2026 m\xECnh c\xF2n k\u1ECBp c\u01B0\u1EDDi.)\n(V\u1EADy l\xE0 m\xECnh
-    ch\u1EBFt r\u1ED3i sao?)"
-  - "???\n(N\u1EBFu \u0111\xE2y l\xE0 c\xE1i ch\u1EBFt\u2026)\n(Th\xEC sao l\u1EA1i
-    y\xEAn t\u0129nh \u0111\u1EBFn v\u1EADy?)\n(\u0110\u1ECBa ng\u1EE5c\u2026 kh\xF4ng
-    ph\u1EA3i n\xEAn \u1ED3n \xE0o h\u01A1n \xE0?)"
-  - "???\n(M\xECnh \u0111\xE3 l\xE0m qu\xE1 nhi\u1EC1u chuy\u1EC7n.)\n(M\xE1u, ti\u1EBFng
-    kh\xF3c, nh\u1EEFng \xE1nh m\u1EAFt van xin.)\n(Kh\xF4ng th\u1EC3 \u0111\u1EBFm
-    h\u1EBFt \u0111\u01B0\u1EE3c n\u1EEFa.)"
-  - "???\n(V\u1EADy m\xE0\u2026)\n(Kh\xF4ng ai \u0111\u1EBFn k\xE9o m\xECnh \u0111i.)\n(Kh\xF4ng
-    xi\u1EC1ng x\xEDch. Kh\xF4ng l\u1EEDa \u0111\u1ECBa ng\u1EE5c.)"
-  - "GOD\n\u201CNg\u01B0\u01A1i ch\u01B0a thu\u1ED9c v\u1EC1 n\u01A1i n\xE0o c\u1EA3.\u201D"
-  - "???\n\n(Gi\u1ECDng n\xF3i \u0111\xF3\u2026)\n(Kh\xF4ng ph\u1EA3i ng\u01B0\u1EDDi.)\n(C\u0169ng
-    kh\xF4ng ph\u1EA3i qu\u1EF7.)\u201D"
-  - "GOD\n\u201CNh\u1EEFng t\u1ED9i l\u1ED7i ng\u01B0\u01A1i gieo r\u1EAFc n\u01A1i
-    tr\u1EA7n th\u1EBF\u2026\nnhi\u1EC1u v\xE0 \u0111\u1ED9c \xE1c \u0111\u1EBFn
-    m\u1EE9c ngay c\u1EA3 \u0111\u1ECBa ng\u1EE5c c\u0169ng kh\xF4ng th\u1EC3 giam
-    gi\u1EEF.\u201D"
-  - "GOD\n\u201CLinh h\u1ED3n ng\u01B0\u01A1i\u2026 kh\xF4ng c\xF3 ch\u1ED7 \u0111\u1EE9ng.\u201D"
-  - "???\n(V\u1EADy l\xE0\u2026 m\xECnh c\xF2n t\u1EC7 h\u01A1n c\u1EA3 qu\u1EF7
-    sao?)"
-  - "GOD\n\u201CNh\u01B0ng c\xF4ng l\xFD kh\xF4ng k\u1EBFt th\xFAc b\u1EB1ng c\xE1i
-    ch\u1EBFt.\u201D"
-  - "GOD\n\u201CTa cho ng\u01B0\u01A1i m\u1ED9t c\u01A1 h\u1ED9i cu\u1ED1i c\xF9ng.\u201D\u201D"
-  - "GOD\n\u201CB\u1EA3y \u0111\u1EE9a tr\u1EBB.\u201D\n\u201CB\u1EA3y linh h\u1ED3n
-    \u0111ang b\u1ECB giam c\u1EA7m.\u201D"
-  - "GOD\n\u201CCh\xFAng kh\xF4ng b\u1ECB tra t\u1EA5n b\u1EDFi qu\u1EF7 d\u1EEF\u2026\nm\xE0
-    b\u1EDFi ch\xEDnh nh\u1EEFng b\u1EADc ph\u1EE5 huynh sinh ra ch\xFAng.\u201D"
-  - "GOD\n\u201CNh\u1EEFng k\u1EBB mang trong m\xECnh b\u1EA3y t\u1ED9i l\u1ED7i.\u201D"
-  - "GOD\n\u201CNg\u1EA1o m\u1EA1n.\u201D \u201CTham lam.\u201D \u201CD\xE2m d\u1EE5c.\u201D
-    \u201C\u0110\u1ED1 k\u1EF5.\u201D \u201CTham \u0103n.\u201D\n\u201CPh\u1EABn
-    n\u1ED9.\u201D \u201CL\u01B0\u1EDDi bi\u1EBFng.\u201D"
-  - "GOD\n\u201CTh\u1EC3 x\xE1c ho\u1EB7c tinh th\u1EA7n c\u1EE7a nh\u1EEFng \u0111\u1EE9a
-    tr\u1EBB \u1EA5y \u0111ang b\u1ECB h\u1EE7y ho\u1EA1i.\u201D"
-  - "GOD\n\u201CNhi\u1EC7m v\u1EE5 c\u1EE7a ng\u01B0\u01A1i\u2026\u201D\u201D"
-  - "GOD\n\u201CL\xE0 c\u1EE9u r\u1ED7i ch\xFAng.\u201D"
-  - "???\n(M\u1ED9t k\u1EBB nh\u01B0 m\xECnh\u2026)\n(\u0110i c\u1EE9u r\u1ED7i ai
-    sao?)"
-  - "???\n(M\u1ED9t k\u1EBB nh\u01B0 m\xECnh\u2026)\n(\u0110i c\u1EE9u r\u1ED7i ai
-    sao?)"
-  - "GOD\n\u201CCh\u1EC9 khi c\u1EA3 b\u1EA3y linh h\u1ED3n \u0111\u01B0\u1EE3c gi\u1EA3i
-    tho\xE1t\u2026\u201D\n\u201CNg\u01B0\u01A1i m\u1EDBi \u0111\u01B0\u1EE3c quy\u1EC1n
-    \u0111\u1EE9ng tr\u01B0\u1EDBc ph\xE1n quy\u1EBFt cu\u1ED1i c\xF9ng.\u201D"
-  - "GOD\n\u201CCh\u1EC9 khi c\u1EA3 b\u1EA3y linh h\u1ED3n \u0111\u01B0\u1EE3c gi\u1EA3i
-    tho\xE1t\u2026\u201D\n\u201CNg\u01B0\u01A1i m\u1EDBi \u0111\u01B0\u1EE3c quy\u1EC1n
-    \u0111\u1EE9ng tr\u01B0\u1EDBc ph\xE1n quy\u1EBFt cu\u1ED1i c\xF9ng.\u201D"
-  - "GOD\n\u201CKhi \u0111\xF3\u2026\u201D\n\u201CTa s\u1EBD quy\u1EBFt \u0111\u1ECBnh
-    linh h\u1ED3n ng\u01B0\u01A1i thu\u1ED9c v\u1EC1 \u0111\xE2u.\u201D"
-  - "???\n(N\u1EBFu \u0111\xE2y l\xE0 h\xECnh ph\u1EA1t\u2026)\n(Th\xEC \u0111\xFAng
-    l\xE0\u2026 t\xE0n nh\u1EABn th\u1EADt.)"
-  - "GOD\nV\u1EADy th\xEC ng\u01B0\u01A1i s\u1EBD ph\u1EA3i l\xE0m n\xF4 l\u1EC7
-    cho 7 con qu\u1EF7, t\u01B0\u1EE3ng tr\u01B0ng cho b\u1EA3y t\u1ED9i l\u1ED7i,
-    v\u0129nh vi\u1EC5n.\""
-  - "GOD\nV\u1EADy quy\u1EBFt \u0111\u1ECBnh c\u1EE7a ng\u01B0\u1EDDi l\xE0 g\xEC"
-  indexChoice1: 26
-  indexAfterChoice1: 27
-  indexChoice2: 28
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
+  - type: 0
+    text: 
 --- !u!1 &1052665280
 GameObject:
   m_ObjectHideFlags: 0

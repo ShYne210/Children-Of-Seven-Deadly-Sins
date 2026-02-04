@@ -1,11 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using System.Collections;
+
+public enum DialogType
+{
+    Normal,
+    Choice1,   // Lựa chọn đầu
+    Choice2,   // Có / Không
+    End
+}
+
+[System.Serializable]
+public class DialogLine
+{
+    public DialogType type;
+
+    [TextArea(2, 6)]
+    public string text;
+}
 
 public class DialogManager : MonoBehaviour
 {
-    // ===== UI =====
     [Header("Panels")]
     public GameObject blackFadePanel;
     public GameObject dialogPanel;
@@ -13,37 +30,20 @@ public class DialogManager : MonoBehaviour
 
     [Header("Text")]
     public TextMeshProUGUI dialogText;
-    public TextMeshProUGUI choiceText1;
-    public TextMeshProUGUI choiceText2;
 
     [Header("Buttons")]
     public Button btnNext;
     public Button btnSkip;
+    public Button btnAuto;
     public Button btnChoice1;
     public Button btnChoice2;
 
-    // ===== Dialog Data =====
-    [Header("Dialog Content")]
-    [TextArea(3, 6)]
-    public string[] dialogs;
+    [Header("Dialog Data")]
+    public DialogLine[] dialogs;
 
-    [Header("Dialog Index Setup")]
-    public int indexChoice1;        // trước lựa chọn 1
-    public int indexAfterChoice1;   // dialog thần giải thích
-    public int indexChoice2;        // trước lựa chọn 2
-
-    int currentIndex = 0;
-
-    enum DialogState
-    {
-        Normal,
-        Choice1,
-        AfterChoice1,
-        Choice2,
-        End
-    }
-
-    DialogState currentState = DialogState.Normal;
+    int index = 0;
+    bool waitingForChoice = false;
+    Coroutine autoRoutine;
 
     void Start()
     {
@@ -51,151 +51,168 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(true);
         choicePanel.SetActive(false);
 
-        ShowDialog();
-
         btnNext.onClick.AddListener(NextDialog);
-        btnSkip.onClick.AddListener(SkipDialog);
-        btnChoice1.onClick.AddListener(() => OnChoice1(1));
-        btnChoice2.onClick.AddListener(() => OnChoice1(2));
+        btnSkip.onClick.AddListener(SkipToNextChoice);
+        btnAuto.onClick.AddListener(ToggleAuto);
+
+        btnChoice1.onClick.AddListener(OnChoice1);
+        btnChoice2.onClick.AddListener(OnChoice2);
+
+        ShowDialog();
     }
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        // ❗ Chặn click xuyên UI
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (waitingForChoice)
+            return;
+
+        if (Input.GetMouseButtonDown(0))
             NextDialog();
     }
 
-    // ===================== DIALOG =====================
-
     void ShowDialog()
     {
-        dialogText.text = dialogs[currentIndex];
+        if (index >= dialogs.Length)
+        {
+            EndCutscene();
+            return;
+        }
+
+        DialogLine line = dialogs[index];
+        dialogText.text = line.text;
+
+        if (line.type == DialogType.Normal)
+        {
+            choicePanel.SetActive(false);
+            waitingForChoice = false;
+        }
+        else
+        {
+            choicePanel.SetActive(true);
+            waitingForChoice = true;
+        }
     }
 
     void NextDialog()
     {
-        if (currentState == DialogState.Choice1 || currentState == DialogState.Choice2)
-            return;
+        if (waitingForChoice) return;
 
-        currentIndex++;
-
-        if (currentState == DialogState.Normal && currentIndex >= indexChoice1)
-        {
-            ShowChoice1();
-            return;
-        }
-
-        if (currentState == DialogState.AfterChoice1 && currentIndex >= indexChoice2)
-        {
-            ShowChoice2();
-            return;
-        }
-
-        if (currentIndex >= dialogs.Length)
-        {
-            EndDialog();
-            return;
-        }
-
+        index++;
         ShowDialog();
     }
 
-    void SkipDialog()
+    void SkipToNextChoice()
     {
-        if (currentState == DialogState.Normal)
+        if (waitingForChoice) return;
+
+        for (int i = index; i < dialogs.Length; i++)
         {
-            currentIndex = indexChoice1;
-            ShowChoice1();
+            if (dialogs[i].type == DialogType.Choice1 ||
+                dialogs[i].type == DialogType.Choice2)
+            {
+                index = i;
+                ShowDialog();
+                return;
+            }
         }
-        else if (currentState == DialogState.AfterChoice1)
-        {
-            currentIndex = indexChoice2;
-            ShowChoice2();
-        }
+
+        EndCutscene();
     }
 
-    // ===================== CHOICE 1 =====================
-
-    void ShowChoice1()
+    void ToggleAuto()
     {
-        currentState = DialogState.Choice1;
-        choicePanel.SetActive(true);
+        if (waitingForChoice) return;
 
-        choiceText1.text = "Tại sao ta phải nghe lời ngươi?";
-        choiceText2.text = "Nếu ta thất bại thì sao?";
-
-        btnNext.interactable = false;
-        btnSkip.interactable = false;
-    }
-
-    void OnChoice1(int choice)
-    {
-        choicePanel.SetActive(false);
-
-        if (choice == 1)
-        {
-            ShowSingleDialog(
-                "Vậy thì ngươi sẽ phải làm nô lệ cho 7 con quỷ, tượng trưng cho bảy tội lỗi, vĩnh viễn."
-            );
-            currentState = DialogState.End;
-        }
+        if (autoRoutine == null)
+            autoRoutine = StartCoroutine(AutoPlay());
         else
         {
-            currentState = DialogState.AfterChoice1;
-            currentIndex = indexAfterChoice1;
-            btnNext.interactable = true;
-            btnSkip.interactable = true;
+            StopCoroutine(autoRoutine);
+            autoRoutine = null;
+        }
+    }
+
+    IEnumerator AutoPlay()
+    {
+        while (!waitingForChoice)
+        {
+            yield return new WaitForSeconds(2f);
+            NextDialog();
+        }
+    }
+
+    // ======================
+    // CHOICE LOGIC
+    // ======================
+
+    void OnChoice1()
+    {
+        if (dialogs[index].type == DialogType.Choice1)
+        {
+            // ❌ Lựa chọn 1 → GAME OVER
+            GameOver();
+        }
+        else if (dialogs[index].type == DialogType.Choice2)
+        {
+            // ❌ Choice 2 - Không
+            GameOver();
+        }
+    }
+
+    void OnChoice2()
+    {
+        if (dialogs[index].type == DialogType.Choice1)
+        {
+            // ✅ Sang Choice 2
+            index++;
+            waitingForChoice = false;
             ShowDialog();
         }
+        else if (dialogs[index].type == DialogType.Choice2)
+        {
+            // ✅ Chấp nhận thử thách → Gameplay
+            StartGameplay();
+        }
     }
 
-    // ===================== CHOICE 2 =====================
+    // ======================
+    // ENDINGS
+    // ======================
 
-    void ShowChoice2()
+    void GameOver()
     {
-        currentState = DialogState.Choice2;
-        choicePanel.SetActive(true);
+        dialogText.text =
+            "GOD\n\"Ngươi đúng là hết thuốc chữa.\nHãy làm nô lệ cho bảy chúa quỷ vĩnh viễn.\"";
 
-        choiceText1.text = "Ta chấp nhận";
-        choiceText2.text = "Ta từ chối";
+        choicePanel.SetActive(false);
+        waitingForChoice = true;
 
         btnNext.interactable = false;
         btnSkip.interactable = false;
+        btnAuto.interactable = false;
     }
 
-    void OnChoice2(int choice)
+    void StartGameplay()
     {
+        dialogText.text =
+            "GOD\n\"Vậy thì hãy chuộc lỗi đi.\nĐừng làm ta thất vọng.\"";
+
         choicePanel.SetActive(false);
+        waitingForChoice = true;
 
-        if (choice == 1)
-        {
-            ShowSingleDialog(
-                "Vậy thì hãy chuộc lỗi đi. Đừng làm ta thất vọng."
-            );
-        }
-        else
-        {
-            ShowSingleDialog(
-                "Ngươi đúng là hết thuốc chữa. Hãy nô dịch cho 7 chúa quỷ vĩnh viễn đi."
-            );
-        }
-
-        currentState = DialogState.End;
-        btnNext.interactable = true;
-        btnSkip.interactable = true;
+        Invoke(nameof(EndCutscene), 2.5f);
     }
 
-    // ===================== UTIL =====================
-
-    void ShowSingleDialog(string text)
-    {
-        dialogText.text = text;
-    }
-
-    void EndDialog()
+    void EndCutscene()
     {
         dialogPanel.SetActive(false);
         blackFadePanel.SetActive(false);
-        // mở gameplay tại đây
+
+        // 👉 MỞ PLAYER / LOAD SCENE GAMEPLAY Ở ĐÂY
+        // SceneManager.LoadScene("Gameplay");
     }
 }
