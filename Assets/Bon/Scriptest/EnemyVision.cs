@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyVision : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] public float moveSpeed = 3f;
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float viewDistance = 10f;
     [SerializeField] private float viewAngle = 45f;
@@ -65,6 +65,12 @@ public class EnemyVision : MonoBehaviour
         currentIndex = (currentIndex + 1) % waypoints.Length;
         isWaiting = false;
         Debug.Log("Enemy đã dừng lại tại điểm chờ: " + waypoints[currentIndex].name);
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+        Debug.Log(gameObject.name + " speed set to: " + moveSpeed);
     }
 
     void MoveAlongPath()
@@ -130,9 +136,11 @@ public class EnemyVision : MonoBehaviour
                 if (hit.transform == player)
                 {
                     Debug.Log("Không có vật cản giữa enemy và player");
-                    if (playerAction.isBusy)
+
+                    // ✅ Enemy check busy mới
+                    if (playerAction.enemyBusy)
                     {
-                        Debug.Log("Enemy đang nhìn thấy player!");
+                        Debug.Log("Enemy đang nhìn thấy player bận (mang đồ hoặc làm nhiệm vụ)!");
 
                         if (!hasCaught)
                         {
@@ -148,7 +156,7 @@ public class EnemyVision : MonoBehaviour
                 else
                 {
                     Debug.Log("Có vật cản giữa enemy và player: " + hit.transform.name);
-                    hasCaught = false; // Nếu bị cản thì không bắt
+                    hasCaught = false;
                 }
             }
             else

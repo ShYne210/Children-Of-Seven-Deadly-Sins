@@ -26,19 +26,26 @@ public class ItemPickup : MonoBehaviour
 
         float dist = Vector3.Distance(player.position, transform.position);
 
-        // Nếu player trong phạm vi
         if (dist <= pickupRange)
         {
-            if (pressEUI != null) pressEUI.SetActive(true);
+            if (pressEUI != null)
+            {
+                pressEUI.SetActive(true);
+                // UI xoay theo camera
+                pressEUI.transform.LookAt(Camera.main.transform);
+                pressEUI.transform.Rotate(0, 180, 0); // xoay ngược để chữ không bị ngược
+            }
 
             if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             {
-                inventory.AddItem(itemName);
-                Debug.Log("Player đã nhặt: " + itemName);
-                isPicked = true;
-
-                if (pressEUI != null) pressEUI.SetActive(false);
-                Destroy(gameObject); // xóa item sau khi nhặt
+                bool pickedUp = inventory.AddItem(itemName);
+                if (pickedUp)
+                {
+                    Debug.Log("Player đã nhặt: " + itemName);
+                    isPicked = true;
+                    if (pressEUI != null) pressEUI.SetActive(false);
+                    Destroy(gameObject);
+                }
             }
         }
         else
@@ -47,19 +54,18 @@ public class ItemPickup : MonoBehaviour
         }
     }
 
-    // Vẽ phạm vi trong Scene view để dễ chỉnh
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, pickupRange);
     }
-    public void Pickup(PlayerInventory inventory) 
-    { 
-        inventory.AddItem(itemName); 
-        Debug.Log("Đã nhặt item: " + itemName); 
-        FindFirstObjectByType<QuestManager>().AddProgress();
-        Destroy(gameObject); // xoá vật phẩm khỏi scene sau khi nhặt 
+
+    public bool Pickup(PlayerInventory inventory)
+    {
+        inventory.AddItem(itemName);
+        Destroy(gameObject);
+        return true; // ✅ nhặt thành công
     }
 
-    
 }

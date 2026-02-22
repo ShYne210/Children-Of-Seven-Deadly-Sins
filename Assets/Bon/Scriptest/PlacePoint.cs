@@ -3,10 +3,17 @@ using UnityEngine.InputSystem;
 
 public class PlacePoint : MonoBehaviour
 {
+    [Header("Thiết lập nhiệm vụ")]
     [SerializeField] private string requiredItemName; // tên vật phẩm cần để mở
     [SerializeField] private GameObject pressEUI;     // UI chữ E
-    [SerializeField] public float openDuration = 5f;
-    [SerializeField] private float openRange = 2f; // Bán kính cho phép mở
+    [SerializeField] public float openDuration = 5f;  // thời gian mở ban đầu
+    [SerializeField] private float openRange = 2f;    // bán kính cho phép mở
+
+    [Header("Thiết lập tăng độ khó")]
+    [SerializeField] private float enemySpeedIncrease = 0.2f; // tăng tốc mỗi lần hoàn thành
+    [SerializeField] private float waitTimeDecrease = 0.5f;   // giảm thời gian chờ mỗi lần hoàn thành
+    [SerializeField] private float minOpenDuration = 1f;      // giới hạn tối thiểu
+
     public bool isCompleted = false;
 
     private bool playerInRange = false;
@@ -26,6 +33,7 @@ public class PlacePoint : MonoBehaviour
             player = other.GetComponent<Player>();
             inventory = other.GetComponent<PlayerInventory>();
             playerInRange = true;
+
             if (pressEUI != null) pressEUI.SetActive(true);
         }
     }
@@ -37,6 +45,7 @@ public class PlacePoint : MonoBehaviour
             playerInRange = false;
             player = null;
             inventory = null;
+
             if (pressEUI != null) pressEUI.SetActive(false);
         }
     }
@@ -45,39 +54,25 @@ public class PlacePoint : MonoBehaviour
     {
         if (playerInRange && !isCompleted && inventory != null && player != null)
         {
+            if (pressEUI != null)
+            {
+                pressEUI.SetActive(true);
+                pressEUI.transform.LookAt(Camera.main.transform);
+                pressEUI.transform.Rotate(0, 180, 0);
+            }
+
             if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             {
-                if (inventory.HasItem(requiredItemName))
-                {
-                    player.SetBusy(5f);
-
-                    Debug.Log("Player bắt đầu mở chỗ bằng vật phẩm: " + requiredItemName);
-
-                    if (pressEUI != null) pressEUI.SetActive(false);
-                }
-                else
-                {
-                    Debug.Log("Player chưa có vật phẩm " + requiredItemName + " để mở!");
-                }
+                TryOpen(player, inventory); // ✅ gom logic vào TryOpen
             }
         }
+        else
+        {
+            if (isCompleted && pressEUI != null)
+                pressEUI.SetActive(false);
+        }
     }
-    // public bool TryOpen(PlayerInventory inventory)
-    // {
-    //     if (isCompleted) return false;
-    //     if (inventory.HasItem(requiredItemName))
-    //     {
-    //         Debug.Log("Đã mở chỗ bằng item: " + requiredItemName);
-    //         isCompleted = true;
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("Không có item " + requiredItemName + " để mở!");
-    //         return false;
-    //     }
-    // }
-    // Gọi khi player nhấn E
+
     public bool TryOpen(Player player, PlayerInventory inventory)
     {
         if (isCompleted) return false;
@@ -92,40 +87,60 @@ public class PlacePoint : MonoBehaviour
         if (inventory.HasItem(requiredItemName))
         {
             player.SetBusy(openDuration);
-            player.StartCoroutine(CompleteOpen(inventory));
+            player.StartCoroutine(CompleteOpen(inventory)); // ✅ gọi coroutine
             FindFirstObjectByType<MessageUI>().ShowMessage("Đang mở chỗ bằng vật phẩm " + requiredItemName);
             return true;
         }
         else
         {
-            FindFirstObjectByType<MessageUI>().ShowMessage("Bạn không có vật phẩm cần thiết!");
+            FindFirstObjectByType<MessageUI>().ShowMessage("Bạn không có vật phẩm cần thiết: " + requiredItemName);
             return false;
         }
     }
 
-
     private System.Collections.IEnumerator CompleteOpen(PlayerInventory inventory)
     {
+        Debug.Log("Bắt đầu đếm thời gian mở chỗ...");
         float timer = 0f;
+
+        // Chỉ đơn giản đếm thời gian, không ngắt giữa chừng
         while (timer < openDuration)
         {
-            // Nếu player bị ngắt giữa chừng (không còn busy hoặc đã completed), dừng lại và không xóa vật phẩm
-            if (isCompleted || player == null || !player.isBusy)
-            {
-                yield break;
-            }
             timer += Time.deltaTime;
             yield return null;
+
+            if (isCompleted || player == null)
+            {
+                Debug.Log("Mở chỗ bị ngắt giữa chừng!");
+                yield break;
+            }
         }
 
-        // Đảm bảo chỉ hoàn thành khi player vẫn còn busy
-        if (!isCompleted && player != null)
-            if (!isCompleted && player != null)
+
+        // Sau khi đủ thời gian thì hoàn thành luôn
+        if (!isCompleted)
+        {
+
+            inventory.RemoveItem(requiredItemName);
+            isCompleted = true;
+
+            if (pressEUI != null) pressEUI.SetActive(false);
+            Collider col = GetComponent<Collider>();
+            if (col != null) col.enabled = false;
+
+            Debug.Log("Mở chỗ thành công!");
+            FindFirstObjectByType<MessageUI>().ShowMessage("Mở chỗ thành công!");
+            FindFirstObjectByType<QuestManager>().AddProgress();
+
+            // ✅ tăng tốc enemy
+            EnemyVision enemyVision = FindFirstObjectByType<EnemyVision>();
+            if (enemyVision != null)
             {
-                inventory.RemoveItem(requiredItemName);
-                isCompleted = true;
-                FindFirstObjectByType<MessageUI>().ShowMessage("Mở chỗ thành công!");
-                FindFirstObjectByType<QuestManager>().AddProgress();
+                enemyVision.SetSpeed(enemyVision.moveSpeed + enemySpeedIncrease);
             }
+
+            // ✅ giảm thời gian chờ cho các điểm sau
+            openDuration = Mathf.Max(minOpenDuration, openDuration - waitTimeDecrease);
+        }
     }
 }
