@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 189240393}
   - component: {fileID: 189240392}
   - component: {fileID: 189240391}
+  - component: {fileID: 189240394}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -348,6 +349,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &189240394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189240390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &328931775
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: -445}
+  m_AnchoredPosition: {x: 809, y: -400.1}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328931777
@@ -590,7 +635,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800166672}
-  - component: {fileID: 800166673}
   m_Layer: 5
   m_Name: DialogPanel
   m_TagString: Untagged
@@ -620,91 +664,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &800166673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800166671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d13ad9b9f4d13c40b90905d7b6f972c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blackFadePanel: {fileID: 1689002407}
-  dialogPanel: {fileID: 800166671}
-  choicePanel: {fileID: 373161391}
-  dialogText: {fileID: 1814361098}
-  choiceText1: {fileID: 1750789886}
-  choiceText2: {fileID: 1289144634}
-  btnNext: {fileID: 328931777}
-  btnSkip: {fileID: 1506161811}
-  btnChoice1: {fileID: 2064440367}
-  btnChoice2: {fileID: 1304669202}
-  dialogs:
-  - "???\n(\u2026)\n(T\u1ED1i qu\xE1\u2026)\n(Sao m\xECnh l\u1EA1i \u1EDF \u0111\xE2y?
-    \u0110\xE2y l\xE0 \u0111\xE2u?)"
-  - "???\n(Kh\xF4ng c\xF2n \u0111au\u2026)\n(Kh\xF4ng c\xF2n ti\u1EBFng h\xF2 reo\u2026)\n(Ph\xE1p
-    tr\u01B0\u1EDDng\u2026 \u0111\xFAng r\u1ED3i. M\xECnh \u0111ang \u1EDF ph\xE1p
-    tr\u01B0\u1EDDng x\u1EED b\u1EAFn.)"
-  - "???\n(Vi\xEAn \u0111\u1EA1n xuy\xEAn qua ng\u1EF1c.)\n(Kho\u1EA3nh kh\u1EAFc
-    \u0111\xF3\u2026 m\xECnh c\xF2n k\u1ECBp c\u01B0\u1EDDi.)\n(V\u1EADy l\xE0 m\xECnh
-    ch\u1EBFt r\u1ED3i sao?)"
-  - "???\n(N\u1EBFu \u0111\xE2y l\xE0 c\xE1i ch\u1EBFt\u2026)\n(Th\xEC sao l\u1EA1i
-    y\xEAn t\u0129nh \u0111\u1EBFn v\u1EADy?)\n(\u0110\u1ECBa ng\u1EE5c\u2026 kh\xF4ng
-    ph\u1EA3i n\xEAn \u1ED3n \xE0o h\u01A1n \xE0?)"
-  - "???\n(M\xECnh \u0111\xE3 l\xE0m qu\xE1 nhi\u1EC1u chuy\u1EC7n.)\n(M\xE1u, ti\u1EBFng
-    kh\xF3c, nh\u1EEFng \xE1nh m\u1EAFt van xin.)\n(Kh\xF4ng th\u1EC3 \u0111\u1EBFm
-    h\u1EBFt \u0111\u01B0\u1EE3c n\u1EEFa.)"
-  - "???\n(V\u1EADy m\xE0\u2026)\n(Kh\xF4ng ai \u0111\u1EBFn k\xE9o m\xECnh \u0111i.)\n(Kh\xF4ng
-    xi\u1EC1ng x\xEDch. Kh\xF4ng l\u1EEDa \u0111\u1ECBa ng\u1EE5c.)"
-  - "GOD\n\u201CNg\u01B0\u01A1i ch\u01B0a thu\u1ED9c v\u1EC1 n\u01A1i n\xE0o c\u1EA3.\u201D"
-  - "???\n\n(Gi\u1ECDng n\xF3i \u0111\xF3\u2026)\n(Kh\xF4ng ph\u1EA3i ng\u01B0\u1EDDi.)\n(C\u0169ng
-    kh\xF4ng ph\u1EA3i qu\u1EF7.)\u201D"
-  - "GOD\n\u201CNh\u1EEFng t\u1ED9i l\u1ED7i ng\u01B0\u01A1i gieo r\u1EAFc n\u01A1i
-    tr\u1EA7n th\u1EBF\u2026\nnhi\u1EC1u v\xE0 \u0111\u1ED9c \xE1c \u0111\u1EBFn
-    m\u1EE9c ngay c\u1EA3 \u0111\u1ECBa ng\u1EE5c c\u0169ng kh\xF4ng th\u1EC3 giam
-    gi\u1EEF.\u201D"
-  - "GOD\n\u201CLinh h\u1ED3n ng\u01B0\u01A1i\u2026 kh\xF4ng c\xF3 ch\u1ED7 \u0111\u1EE9ng.\u201D"
-  - "???\n(V\u1EADy l\xE0\u2026 m\xECnh c\xF2n t\u1EC7 h\u01A1n c\u1EA3 qu\u1EF7
-    sao?)"
-  - "GOD\n\u201CNh\u01B0ng c\xF4ng l\xFD kh\xF4ng k\u1EBFt th\xFAc b\u1EB1ng c\xE1i
-    ch\u1EBFt.\u201D"
-  - "GOD\n\u201CTa cho ng\u01B0\u01A1i m\u1ED9t c\u01A1 h\u1ED9i cu\u1ED1i c\xF9ng.\u201D\u201D"
-  - "GOD\n\u201CB\u1EA3y \u0111\u1EE9a tr\u1EBB.\u201D\n\u201CB\u1EA3y linh h\u1ED3n
-    \u0111ang b\u1ECB giam c\u1EA7m.\u201D"
-  - "GOD\n\u201CCh\xFAng kh\xF4ng b\u1ECB tra t\u1EA5n b\u1EDFi qu\u1EF7 d\u1EEF\u2026\nm\xE0
-    b\u1EDFi ch\xEDnh nh\u1EEFng b\u1EADc ph\u1EE5 huynh sinh ra ch\xFAng.\u201D"
-  - "GOD\n\u201CNh\u1EEFng k\u1EBB mang trong m\xECnh b\u1EA3y t\u1ED9i l\u1ED7i.\u201D"
-  - "GOD\n\u201CNg\u1EA1o m\u1EA1n.\u201D \u201CTham lam.\u201D \u201CD\xE2m d\u1EE5c.\u201D
-    \u201C\u0110\u1ED1 k\u1EF5.\u201D \u201CTham \u0103n.\u201D\n\u201CPh\u1EABn
-    n\u1ED9.\u201D \u201CL\u01B0\u1EDDi bi\u1EBFng.\u201D"
-  - "GOD\n\u201CTh\u1EC3 x\xE1c ho\u1EB7c tinh th\u1EA7n c\u1EE7a nh\u1EEFng \u0111\u1EE9a
-    tr\u1EBB \u1EA5y \u0111ang b\u1ECB h\u1EE7y ho\u1EA1i.\u201D"
-  - "GOD\n\u201CNhi\u1EC7m v\u1EE5 c\u1EE7a ng\u01B0\u01A1i\u2026\u201D\u201D"
-  - "GOD\n\u201CL\xE0 c\u1EE9u r\u1ED7i ch\xFAng.\u201D"
-  - "???\n(M\u1ED9t k\u1EBB nh\u01B0 m\xECnh\u2026)\n(\u0110i c\u1EE9u r\u1ED7i ai
-    sao?)"
-  - "???\n(M\u1ED9t k\u1EBB nh\u01B0 m\xECnh\u2026)\n(\u0110i c\u1EE9u r\u1ED7i ai
-    sao?)"
-  - "GOD\n\u201CCh\u1EC9 khi c\u1EA3 b\u1EA3y linh h\u1ED3n \u0111\u01B0\u1EE3c gi\u1EA3i
-    tho\xE1t\u2026\u201D\n\u201CNg\u01B0\u01A1i m\u1EDBi \u0111\u01B0\u1EE3c quy\u1EC1n
-    \u0111\u1EE9ng tr\u01B0\u1EDBc ph\xE1n quy\u1EBFt cu\u1ED1i c\xF9ng.\u201D"
-  - "GOD\n\u201CCh\u1EC9 khi c\u1EA3 b\u1EA3y linh h\u1ED3n \u0111\u01B0\u1EE3c gi\u1EA3i
-    tho\xE1t\u2026\u201D\n\u201CNg\u01B0\u01A1i m\u1EDBi \u0111\u01B0\u1EE3c quy\u1EC1n
-    \u0111\u1EE9ng tr\u01B0\u1EDBc ph\xE1n quy\u1EBFt cu\u1ED1i c\xF9ng.\u201D"
-  - "GOD\n\u201CKhi \u0111\xF3\u2026\u201D\n\u201CTa s\u1EBD quy\u1EBFt \u0111\u1ECBnh
-    linh h\u1ED3n ng\u01B0\u01A1i thu\u1ED9c v\u1EC1 \u0111\xE2u.\u201D"
-  - "???\n(N\u1EBFu \u0111\xE2y l\xE0 h\xECnh ph\u1EA1t\u2026)\n(Th\xEC \u0111\xFAng
-    l\xE0\u2026 t\xE0n nh\u1EABn th\u1EADt.)"
-  - "GOD\nV\u1EADy th\xEC ng\u01B0\u01A1i s\u1EBD ph\u1EA3i l\xE0m n\xF4 l\u1EC7
-    cho 7 con qu\u1EF7, t\u01B0\u1EE3ng tr\u01B0ng cho b\u1EA3y t\u1ED9i l\u1ED7i,
-    v\u0129nh vi\u1EC5n.\""
-  - "GOD\nV\u1EADy quy\u1EBFt \u0111\u1ECBnh c\u1EE7a ng\u01B0\u1EDDi l\xE0 g\xEC"
-  indexChoice1: 26
-  indexAfterChoice1: 27
-  indexChoice2: 28
 --- !u!1 &1052665280
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +797,7 @@ GameObject:
   - component: {fileID: 1122967321}
   - component: {fileID: 1122967320}
   - component: {fileID: 1122967319}
+  - component: {fileID: 1122967323}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -928,6 +888,191 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1122967323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122967318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d13ad9b9f4d13c40b90905d7b6f972c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogPanel: {fileID: 800166671}
+  choicePanel: {fileID: 373161391}
+  dialogText: {fileID: 1814361098}
+  choiceText1: {fileID: 1750789886}
+  choiceText2: {fileID: 1289144634}
+  btnNext: {fileID: 328931777}
+  btnAuto: {fileID: 1799473375}
+  btnChoice1: {fileID: 2064440367}
+  btnChoice2: {fileID: 1304669202}
+  mainDialogs:
+  - "(T\u1ED1i \u0111\u1EBFn m\u1EE9c ngay c\u1EA3 \xFD ngh\u0129 c\u0169ng kh\xF4ng
+    c\xF2n h\xECnh d\u1EA1ng.)"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i c\xF3 nghe th\u1EA5y ch\xFAng kh\xF4ng?"
+  - "Th\u1EA7n: Nh\u1EEFng ti\u1EBFng kh\xF3c r\u1EA5t nh\u1ECF.\nB\u1ECB b\xF3p
+    ngh\u1EB9t sau nh\u1EEFng c\xE1nh c\u1EEDa \u0111\xF3ng k\xEDn."
+  - "Th\u1EA7n: B\u1EA3y \u0111\u1EE9a tr\u1EBB."
+  - "Th\u1EA7n: B\u1EA3y c\u0103n ph\xF2ng."
+  - "Th\u1EA7n: V\xE0 b\u1EA3y t\u1ED9i l\u1ED7i \u0111ang nu\xF4i d\u01B0\u1EE1ng
+    n\u1ED7i \u0111au c\u1EE7a ch\xFAng m\u1ED7i ng\xE0y."
+  - "Th\u1EA7n: Ki\xEAu ng\u1EA1o, Ghen t\u1ECB, Ph\u1EABn n\u1ED9, Ph\u1EABn n\u1ED9,
+    L\u01B0\u1EDDi bi\u1EBFng,\nD\u1EE5c v\u1ECDng, Ph\xE0m \u0103n.\n"
+  - "Th\u1EA7n: Cha m\u1EB9 c\u1EE7a ch\xFAng kh\xF4ng ph\u1EA3i qu\xE1i v\u1EADt.\nH\u1ECD
+    ch\u1EC9 l\xE0 nh\u1EEFng k\u1EBB ch\u01B0a bao gi\u1EDD d\xE1m \u0111\u1ED1i
+    di\u1EC7n v\u1EDBi ch\xEDnh m\xECnh.\n"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i s\u1EBD b\u01B0\u1EDBc v\xE0o t\u1EEBng k\xFD \u1EE9c.\nH\xF3a
+    th\xE2n th\xE0nh t\u1EEBng \u0111\u1EE9a tr\u1EBB.\n"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i s\u1EBD b\u01B0\u1EDBc v\xE0o t\u1EEBng k\xFD \u1EE9c.\nH\xF3a
+    th\xE2n th\xE0nh t\u1EEBng \u0111\u1EE9a tr\u1EBB.\n"
+  - "Th\u1EA7n: C\u1EA3m nh\u1EADn n\u1ED7i s\u1EE3 c\u1EE7a ch\xFAng.\nN\u1ED7i
+    im l\u1EB7ng c\u1EE7a ch\xFAng.\nN\u1ED7i c\xF4 \u0111\u1ED9c c\u1EE7a ch\xFAng.\n"
+  - "Th\u1EA7n: V\xE0 gi\u1EA3i c\u1EE9u ch\xFAng kh\u1ECFi chi\u1EBFc b\xF3ng c\u1EE7a
+    cha m\u1EB9 m\xECnh.\n"
+  - "Th\u1EA7n: Nh\u01B0ng h\xE3y nh\u1EDB k\u1EF9 m\u1ED9t \u0111i\u1EC1u."
+  - "Th\u1EA7n: M\u1ED7i c\u0103n ph\xF2ng ng\u01B0\u01A1i b\u01B0\u1EDBc v\xE0o\u2026"
+  - "Th\u1EA7n: s\u1EBD ph\u1EA3n chi\u1EBFu l\u1EA1i m\u1ED9t ph\u1EA7n qu\xE1 kh\u1EE9
+    c\u1EE7a ch\xEDnh ng\u01B0\u01A1i."
+  - "Th\u1EA7n: B\u1EDFi v\xEC trong cu\u1ED9c \u0111\u1EDDi m\xECnh, ng\u01B0\u01A1i
+    c\u0169ng \u0111\xE3 t\u1EEBng ph\u1EA1m ph\u1EA3i \u0111\u1EE7 c\u1EA3 b\u1EA3y
+    t\u1ED9i l\u1ED7i \u0111\xF3."
+  - "Th\u1EA7n: V\xEC h\xE8n nh\xE1t. V\xEC y\u1EBFu \u0111u\u1ED1i. V\xEC ham mu\u1ED1n
+    \u0111\u01B0\u1EE3c c\xF4ng nh\u1EADn.\nV\xEC s\u1EE3 b\u1ECB b\u1ECF r\u01A1i."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i kh\xF4ng kh\xE1c h\u1ECD."
+  - "Th\u1EA7n: C\xE2u h\u1ECFi duy nh\u1EA5t l\xE0\u2026 Ng\u01B0\u01A1i c\xF3 \u0111\u1EE7
+    can \u0111\u1EA3m \u0111\u1EC3 nh\xECn th\u1EB3ng v\xE0o \u0111i\u1EC1u \u0111\xF3
+    kh\xF4ng?"
+  explainA:
+  - "Th\u1EA7n: Ng\u01B0\u01A1i ngh\u0129 \u0111\xE2y l\xE0 m\u1EC7nh l\u1EC7nh sao?"
+  - "Th\u1EA7n: Kh\xF4ng."
+  - "Th\u1EA7n: \u0110\xE2y l\xE0 c\u01A1 h\u1ED9i chu\u1ED9c l\u1ED7i."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i c\xF2n nh\u1EDB \u0111\u1EE9a tr\u1EBB \u0111\xE3
+    t\u1EEBng kh\xF3c trong ph\xF2ng t\u1ED1i kh\xF4ng?"
+  - "Th\u1EA7n: Kh\xF4ng ai nghe th\u1EA5y n\xF3."
+  - "Th\u1EA7n: Kh\xF4ng ai \u0111\u1EE9ng v\u1EC1 ph\xEDa n\xF3."
+  - "Th\u1EA7n: Kh\xF4ng ai \u0111\u1EE9ng v\u1EC1 ph\xEDa n\xF3."
+  - "Th\u1EA7n: V\xE0 r\u1ED3i m\u1ED9t ng\xE0y\u2026"
+  - "Th\u1EA7n: n\xF3 h\u1ECDc c\xE1ch im l\u1EB7ng."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng ch\u1EE9ng ki\u1EBFn m\u1ED9t
+    b\u1EA5t c\xF4ng.\nV\xE0 ng\u01B0\u01A1i \u0111\xE3 quay l\u01B0ng l\u1EA1i."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng ch\u1EE9ng ki\u1EBFn m\u1ED9t
+    b\u1EA5t c\xF4ng.\nV\xE0 ng\u01B0\u01A1i \u0111\xE3 quay l\u01B0ng l\u1EA1i."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 s\u1EF1 h\xE8n nh\xE1t."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng ghen t\u1ECB v\u1EDBi h\u1EA1nh
+    ph\xFAc c\u1EE7a ng\u01B0\u1EDDi kh\xE1c.\nV\xE0 mong h\u1ECD th\u1EA5t b\u1EA1i."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 \u0111\u1ED1 k\u1EF5."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng n\u1ED5i gi\u1EADn v\xE0 l\xE0m
+    t\u1ED5n th\u01B0\u01A1ng ai \u0111\xF3 ch\u1EC9 v\xEC b\u1EA3n th\xE2n t\u1ED5n
+    th\u01B0\u01A1ng."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 ph\u1EABn n\u1ED9."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng ch\u1ECDn an to\xE0n thay v\xEC
+    \u0111\u1EE9ng l\xEAn b\u1EA3o v\u1EC7 \u0111i\u1EC1u \u0111\xFAng."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 l\u01B0\u1EDDi bi\u1EBFng c\u1EE7a \u0111\u1EA1o
+    \u0111\u1EE9c."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng mu\u1ED1n nhi\u1EC1u h\u01A1n
+    m\u1EE9c m\xECnh c\u1EA7n."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 tham lam."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng \u0111\xE1nh \u0111\u1ED5i gi\xE1
+    tr\u1ECB c\u1EE7a m\xECnh v\xEC ham mu\u1ED1n nh\u1EA5t th\u1EDDi."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 d\u1EE5c v\u1ECDng."
+  - "Th\u1EA7n: V\xE0 ng\u01B0\u01A1i \u0111\xE3 t\u1EEBng nu\u1ED1t ch\u1EEDng m\u1ECDi
+    c\u1EA3m x\xFAc ti\xEAu c\u1EF1c\nthay v\xEC \u0111\u1ED1i di\u1EC7n v\u1EDBi
+    n\xF3."
+  - "Th\u1EA7n: \u0110\xF3 l\xE0 s\u1EF1 ph\xE0m \u0103n c\u1EE7a linh h\u1ED3n."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i kh\xF4ng nghe l\u1EDDi ta."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i kh\xF4ng nghe l\u1EDDi ta."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111ang \u0111\u1ED1i di\u1EC7n v\u1EDBi ch\xEDnh
+    m\xECnh."
+  - "Th\u1EA7n: Gi\u1EA3i c\u1EE9u nh\u1EEFng \u0111\u1EE9a tr\u1EBB \u1EA5y\nkh\xF4ng
+    ch\u1EC9 \u0111\u1EC3 c\u1EE9u ch\xFAng, m\xE0 c\u1EE9u c\u1EA3 b\u1EA3n th\xE2n
+    ng\u01B0\u01A1i."
+  - "Th\u1EA7n: Gi\u1EA3i c\u1EE9u nh\u1EEFng \u0111\u1EE9a tr\u1EBB \u1EA5y\nkh\xF4ng
+    ch\u1EC9 \u0111\u1EC3 c\u1EE9u ch\xFAng, m\xE0 c\u1EE9u c\u1EA3 b\u1EA3n th\xE2n
+    ng\u01B0\u01A1i."
+  - "Th\u1EA7n: C\u1EE9u l\u1EA5y phi\xEAn b\u1EA3n \u0111\xE3 t\u1EEBng y\u1EBFu
+    \u0111u\u1ED1i c\u1EE7a ng\u01B0\u01A1i."
+  explainB:
+  - "Th\u1EA7n: Th\u1EA5t b\u1EA1i?"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i ngh\u0129 m\xECnh ch\u01B0a t\u1EEBng th\u1EA5t b\u1EA1i
+    sao?"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 th\u1EA5t b\u1EA1i khi ch\u1ECDn im l\u1EB7ng."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 th\u1EA5t b\u1EA1i khi \u0111\u1EC3 n\u1ED7i
+    s\u1EE3 \u0111i\u1EC1u khi\u1EC3n m\xECnh."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 th\u1EA5t b\u1EA1i khi tr\u1EDF th\xE0nh
+    k\u1EBB \u0111\u1EE9ng ngo\xE0i cu\u1ED9c."
+  - "Th\u1EA7n: Nh\u01B0ng l\u1EA7n n\xE0y kh\xE1c."
+  - "Th\u1EA7n: N\u1EBFu ng\u01B0\u01A1i b\u01B0\u1EDBc v\xE0o k\xFD \u1EE9c c\u1EE7a
+    nh\u1EEFng \u0111\u1EE9a tr\u1EBB \u1EA5y\nv\xE0 th\u1EA5t b\u1EA1i\u2026"
+  - "Th\u1EA7n: \xCDt nh\u1EA5t ng\u01B0\u01A1i \u0111\xE3 d\xE1m \u0111\u1ED1i di\u1EC7n."
+  - "Th\u1EA7n: C\xF2n n\u1EBFu ng\u01B0\u01A1i t\u1EEB ch\u1ED1i?"
+  - "Th\u1EA7n: B\u1EA3y \u0111\u1EE9a tr\u1EBB s\u1EBD c\xF3 nh\u1EEFng k\u1EBFt
+    c\u1EE5c nh\u01B0 n\xE0o ch\u1EAFc ng\u01B0\u1EDDi c\u0169ng hi\u1EC3u nh\u1EC9
+    ?"
+  - "Th\u1EA7n: S\u1EBD tr\u1EDF th\xE0nh m\u1ED9t phi\xEAn b\u1EA3n c\u1EE7a ng\u01B0\u1EDDi
+    ho\u1EB7c t\u1EC7 h\u01A1n l\xE0 t\u1EC7 n\u1EA1n, l\xE0 c\xE1i ch\u1EBFt."
+  - "Th\u1EA7n: S\u1EBD bi\u1EBFn th\xE0nh m\u1ED9t phi\xEAn b\u1EA3n kh\xE1c c\u1EE7a
+    cha m\u1EB9 ch\xFAng."
+  - "Th\u1EA7n: S\u1EBD bi\u1EBFn th\xE0nh m\u1ED9t phi\xEAn b\u1EA3n kh\xE1c c\u1EE7a
+    cha m\u1EB9 ch\xFAng."
+  - "Th\u1EA7n: Th\u1EA5t b\u1EA1i kh\xF4ng \u0111\xE1ng s\u1EE3."
+  - "Th\u1EA7n: S\u1ED1ng c\u1EA3 \u0111\u1EDDi m\xE0 kh\xF4ng s\u1EEDa sai m\u1EDBi
+    \u0111\xE1ng s\u1EE3."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i s\u1EE3 r\u1EB1ng m\xECnh kh\xF4ng \u0111\u1EE7 m\u1EA1nh."
+  - "Th\u1EA7n: Nh\u01B0ng ta th\u1EA5y \u0111i\u1EC1u kh\xE1c."
+  - "Th\u1EA7n: Ta th\u1EA5y m\u1ED9t k\u1EBB \u0111\xE3 m\u1EC7t m\u1ECFi v\u1EDBi
+    vi\u1EC7c t\u1EF1 khinh th\u01B0\u1EDDng ch\xEDnh m\xECnh."
+  - "Th\u1EA7n: Ta th\u1EA5y m\u1ED9t k\u1EBB \u0111\xE3 m\u1EC7t m\u1ECFi v\u1EDBi
+    vi\u1EC7c t\u1EF1 khinh th\u01B0\u1EDDng ch\xEDnh m\xECnh."
+  - "Th\u1EA7n: V\xE0 \u0111\xE2y\u2026\nl\xE0 c\u01A1 h\u1ED9i cu\u1ED1i c\xF9ng
+    \u0111\u1EC3 thay \u0111\u1ED5i \u0111i\u1EC1u \u0111\xF3."
+  acceptDialogs:
+  - "Th\u1EA7n: V\u1EADy l\xE0 ng\u01B0\u01A1i \u0111\xE3 ch\u1ECDn b\u01B0\u1EDBc
+    v\xE0o b\xF3ng t\u1ED1i."
+  - "Th\u1EA7n: T\u1ED1t.\nC\u0103n ph\xF2ng \u0111\u1EA7u ti\xEAn \u0111ang ch\u1EDD
+    ng\u01B0\u01A1i."
+  - "Th\u1EA7n: Khi ng\u01B0\u1EDDi b\u01B0\u1EDBc qua t\u1EEBng c\xE1nh c\u1EEDa
+    ng\u01B0\u01A1i kh\xF4ng ch\u1EC9 nh\xECn th\u1EA5y b\u1ECDn tr\u1EBB."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i s\u1EBD tr\u1EDF th\xE0nh ch\xFAng."
+  - "Th\u1EA7n: M\u1ED7i l\u1EA7n c\u1EE9u \u0111\u01B0\u1EE3c m\u1ED9t \u0111\u1EE9a
+    tr\u1EBB,\nm\u1ED9t ph\u1EA7n t\u1ED9i l\u1ED7i trong ng\u01B0\u01A1i s\u1EBD
+    b\u1ECB l\u1ED9t b\u1ECF."
+  - "Th\u1EA7n: Nh\u01B0ng qu\xE1 tr\xECnh \u0111\xF3\u2026"
+  - "Th\u1EA7n: s\u1EBD \u0111au \u0111\u1EDBn."
+  - "Th\u1EA7n: V\xEC ng\u01B0\u01A1i s\u1EBD ph\u1EA3i th\u1EEBa nh\u1EADn r\u1EB1ng\nm\xECnh
+    \u0111\xE3 t\u1EEBng gi\u1ED1ng nh\u1EEFng k\u1EBB m\xE0 ng\u01B0\u01A1i c\u0103m
+    gh\xE9t."
+  - "Th\u1EA7n: \u0110\xE2y kh\xF4ng ph\u1EA3i tr\xF2 ch\u01A1i anh h\xF9ng."
+  - "Th\u1EA7n: \u0110\xE2y l\xE0 h\xE0nh tr\xECnh chu\u1ED9c t\u1ED9i."
+  - "Th\u1EA7n: V\xE0 t\u1EEB kho\u1EA3nh kh\u1EAFc n\xE0y\u2026"
+  - "Th\u1EA7n: Kh\xF4ng c\xF2n \u0111\u01B0\u1EDDng quay l\u1EA1i n\u1EEFa."
+  gameOverDialogs:
+  - "Th\u1EA7n: Ta hi\u1EC3u r\u1ED3i."
+  - "Th\u1EA7n: Ng\u01B0\u01A1i ch\u1ECDn an to\xE0n."
+  - "Th\u1EA7n: Gi\u1ED1ng nh\u01B0 l\u1EA7n ng\u01B0\u01A1i ch\u1ECDn im l\u1EB7ng
+    khi th\u1EA5y m\u1ED9t \u0111\u1EE9a tr\u1EBB b\u1ECB t\u1ED5n th\u01B0\u01A1ng."
+  - "Th\u1EA7n: Gi\u1ED1ng nh\u01B0 l\u1EA7n ng\u01B0\u01A1i ch\u1ECDn b\u1ECF \u0111i
+    thay v\xEC xin l\u1ED7i."
+  - "Th\u1EA7n: Gi\u1ED1ng nh\u01B0 l\u1EA7n ng\u01B0\u01A1i n\xF3i:\n\u201CKh\xF4ng
+    ph\u1EA3i vi\u1EC7c c\u1EE7a m\xECnh.\u201D"
+  - "Th\u1EA7n: B\u1EA3y \u0111\u1EE9a tr\u1EBB s\u1EBD ti\u1EBFp t\u1EE5c s\u1ED1ng
+    trong b\xF3ng t\u1ED1i."
+  - "Th\u1EA7n: V\xE0 ng\u01B0\u01A1i s\u1EBD ti\u1EBFp t\u1EE5c s\u1ED1ng v\u1EDBi
+    qu\xE1 kh\u1EE9 c\u1EE7a m\xECnh."
+  - "Th\u1EA7n: Kh\xF4ng ai bi\u1EBFt."
+  - "Th\u1EA7n: Kh\xF4ng ai nh\u1EAFc \u0111\u1EBFn."
+  - "Th\u1EA7n: Nh\u01B0ng m\u1ED7i khi nh\xECn l\u1EA1i\u2026"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i s\u1EBD th\u1EA5y \xE1nh m\u1EAFt c\u1EE7a m\u1ED9t
+    \u0111\u1EE9a tr\u1EBB\n\u0111ang h\u1ECFi t\u1EA1i sao ng\u01B0\u01A1i kh\xF4ng
+    c\u1EE9u n\xF3."
+  - "Th\u1EA7n: V\xE0 c\xE2u tr\u1EA3 l\u1EDDi\u2026"
+  - "Th\u1EA7n: Ng\u01B0\u01A1i \u0111\xE3 bi\u1EBFt t\u1EEB \u0111\u1EA7u."
+  - "Th\u1EA7n: Nh\u01B0ng ng\u01B0\u01A1i kh\xF4ng \u0111\u1EE7 can \u0111\u1EA3m
+    \u0111\u1EC3 th\u1EEBa nh\u1EADn."
+  - "Th\u1EA7n: Gi\u1EDD th\xEC c\xFAt xu\u1ED1ng d\u01B0\u1EDBi \u0111\u1ECBa ng\u1EE5c
+    v\xE0 l\xE0m n\xF4 l\u1EC7 cho l\u0169 qu\u1EF7 \u0111\u1EEF \u0111i."
 --- !u!1 &1289144632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1241,6 @@ RectTransform:
   m_Children:
   - {fileID: 328931776}
   - {fileID: 1799473374}
-  - {fileID: 1506161810}
   - {fileID: 373161392}
   m_Father: {fileID: 800166672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1301,127 +1445,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443447093}
   m_CullTransparentMesh: 1
---- !u!1 &1506161809
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1506161810}
-  - component: {fileID: 1506161813}
-  - component: {fileID: 1506161812}
-  - component: {fileID: 1506161811}
-  m_Layer: 5
-  m_Name: BtnSkip
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1506161810
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506161809}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1715656219}
-  m_Father: {fileID: 1290003434}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: -371}
-  m_SizeDelta: {x: 150, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1506161811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506161809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1506161812}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1506161812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506161809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 1123343133, guid: 38a0e82caac05f14281daad75adf16f7, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1506161813
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506161809}
-  m_CullTransparentMesh: 1
 --- !u!1 &1689002407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,143 +1520,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689002407}
-  m_CullTransparentMesh: 1
---- !u!1 &1715656218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1715656219}
-  - component: {fileID: 1715656221}
-  - component: {fileID: 1715656220}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1715656219
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715656218}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1506161810}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1715656220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715656218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Skip
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294638330
-  m_fontColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1715656221
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715656218}
   m_CullTransparentMesh: 1
 --- !u!1 &1750789884
 GameObject:
@@ -1808,7 +1694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: -297}
+  m_AnchoredPosition: {x: 809, y: -320}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799473375

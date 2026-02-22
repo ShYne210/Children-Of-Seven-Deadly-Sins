@@ -8,10 +8,14 @@ public class MainMenuUI : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject chapterPanel;
 
-    // ▶ Start Game
+    [Header("Scene Names")]
+    public string cutsceneSceneName = "Cutscene"; // Scene dialog mở đầu
+    //public string gameSceneName = "GameScene";   // Scene gameplay chính
+
+    // ▶ Start Game -> chuyển sang Cutscene (dialog intro)
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene"); // tên scene gameplay
+        SceneManager.LoadScene(cutsceneSceneName);
     }
 
     // 📚 Chọn chương
