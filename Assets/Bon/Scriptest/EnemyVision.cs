@@ -3,16 +3,27 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
 {
+    [Header("===== Công cụ =====")]
     [SerializeField] private Transform player;
-    [SerializeField] public float moveSpeed = 3f;
     [SerializeField] private Transform[] waypoints;
+    [SerializeField] private AudioSource chaseAudio;
+
+    [Header("===== Tuần tra =====")]
+    public float moveSpeed = 3f;
+    [SerializeField] private float waitTime = 2f;
+
+    [Header("===== Tầm nhìn =====")]
     [SerializeField] private float viewDistance = 10f;
     [SerializeField] private float viewAngle = 45f;
-    [SerializeField] private float waitTime = 2f;
+
+    [Header("===== Rượt đuổi =====")]
+    [SerializeField] private float chaseSpeed = 6f;
+
     private bool isWaiting = false;
     private int currentIndex = 0;
-    private bool hasCaught = false;
+    private bool isChasing = false;
     private Player playerAction;
+    private Animator animator;
 
     void Start()
     {
@@ -20,57 +31,25 @@ public class EnemyVision : MonoBehaviour
         {
             playerAction = player.GetComponent<Player>();
         }
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (!isWaiting)
-        { MoveAlongPath(); }
+        if (isChasing) ChasePlayer();
+        else if (!isWaiting) MoveAlongPath();
+        else animator.SetFloat("Speed", 0f);
+
         CheckVision();
-
-        //Test 1
-        // Vector3 dirToPlayer = (player.position - transform.position).normalized;
-        // float angle = Vector3.Angle(transform.forward, dirToPlayer);
-
-        // if (angle < viewAngle)
-        // {
-        //     //Vẫn hiện Debug được khi có vật thể nào đó trong tầm nhìn
-        //     Debug.Log("Enemy thấy player trong góc nhìn!");
-        //     //Từ khúc này không hoạt động kiểu như không thấy player
-        //     float dist = Vector3.Distance(transform.position, player.position);
-        //     if (dist < viewDistance)
-        //     {
-        //         // Kiểm tra có vật cản không
-        //         if (!Physics.Raycast(transform.position, dirToPlayer, dist))
-        //         {
-        //             CatchPlayer();
-        //         }
-        //     }
-        // }
-        // Test 2
-        // if (player == null) return;
-
-        // float dist = Vector3.Distance(transform.position, player.position);
-        // if (dist < viewDistance)
-        // {
-        //     Debug.Log("Enemy thấy player!");
-        // }
-
     }
 
     IEnumerator WaitAtPoint()
     {
         isWaiting = true;
-        yield return new WaitForSeconds(waitTime); // dừng lại waitTime giây
+        animator.SetFloat("Speed", 0f);
+        yield return new WaitForSeconds(waitTime);
         currentIndex = (currentIndex + 1) % waypoints.Length;
         isWaiting = false;
-        Debug.Log("Enemy đã dừng lại tại điểm chờ: " + waypoints[currentIndex].name);
-    }
-
-    public void SetSpeed(float newSpeed)
-    {
-        moveSpeed = newSpeed;
-        Debug.Log(gameObject.name + " speed set to: " + moveSpeed);
     }
 
     void MoveAlongPath()
@@ -79,8 +58,8 @@ public class EnemyVision : MonoBehaviour
 
         Transform target = waypoints[currentIndex];
         transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        animator.SetFloat("Speed", moveSpeed);
 
-        // Xoay mượt theo hướng đi
         Vector3 direction = (target.position - transform.position).normalized;
         if (direction != Vector3.zero)
         {
@@ -88,36 +67,13 @@ public class EnemyVision : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
 
-        // Kiểm tra nếu đã đến waypoint
         if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
-            // Nếu waypoint là StopPoint thì dừng lại
-            if (target.CompareTag("StopPoint"))
-            {
-                StartCoroutine(WaitAtPoint());
-            }
-            // Nếu waypoint là MovePoint thì đi tiếp ngay
-            else if (target.CompareTag("MovePoint"))
-            {
-                currentIndex = (currentIndex + 1) % waypoints.Length;
-            }
+            if (target.CompareTag("StopPoint")) StartCoroutine(WaitAtPoint());
+            else currentIndex = (currentIndex + 1) % waypoints.Length;
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        // Vẽ bán kính tầm nhìn
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, viewDistance);
-
-        // Vẽ hai đường biên góc nhìn
-        Vector3 leftBoundary = Quaternion.Euler(0, -viewAngle, 0) * transform.forward;
-        Vector3 rightBoundary = Quaternion.Euler(0, viewAngle, 0) * transform.forward;
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, leftBoundary * viewDistance);
-        Gizmos.DrawRay(transform.position, rightBoundary * viewDistance);
-    }
     void CheckVision()
     {
         if (player == null || playerAction == null) return;
@@ -133,42 +89,46 @@ public class EnemyVision : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(origin, dirToPlayer, out hit, dist))
             {
-                if (hit.transform == player)
+                if (hit.transform == player && playerAction.enemyBusy)
                 {
-                    Debug.Log("Không có vật cản giữa enemy và player");
-
-                    // ✅ Enemy check busy mới
-                    if (playerAction.enemyBusy)
-                    {
-                        Debug.Log("Enemy đang nhìn thấy player bận (mang đồ hoặc làm nhiệm vụ)!");
-
-                        if (!hasCaught)
-                        {
-                            CatchPlayer();
-                            hasCaught = true;
-                        }
-                    }
-                    else
-                    {
-                        hasCaught = false; // Nếu player không busy thì không bắt
-                    }
+                    if (!isChasing) StartChase();
                 }
-                else
-                {
-                    Debug.Log("Có vật cản giữa enemy và player: " + hit.transform.name);
-                    hasCaught = false;
-                }
+                else StopChase();
             }
-            else
-            {
-                Debug.Log("Raycast không chạm gì cả!");
-                hasCaught = false;
-            }
+            else StopChase();
         }
-        else
+        else StopChase();
+    }
+
+    void StartChase()
+    {
+        isChasing = true;
+        moveSpeed = chaseSpeed;
+        animator.SetFloat("Speed", moveSpeed);
+
+        if (chaseAudio != null && !chaseAudio.isPlaying) chaseAudio.Play();
+    }
+
+    void StopChase()
+    {
+        isChasing = false;
+        moveSpeed = 3f;
+        if (chaseAudio != null && chaseAudio.isPlaying) chaseAudio.Stop();
+    }
+
+    void ChasePlayer()
+    {
+        Vector3 target = player.position;
+        transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+
+        Vector3 direction = (target - transform.position).normalized;
+        if (direction != Vector3.zero)
         {
-            hasCaught = false;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
+
+        if (Vector3.Distance(transform.position, player.position) < 1.0f) CatchPlayer();
     }
 
     void CatchPlayer()
@@ -176,8 +136,35 @@ public class EnemyVision : MonoBehaviour
         Debug.Log("Enemy đã phát hiện và bắt player!");
         if (player != null)
         {
-            Destroy(player.gameObject);
+            PlayerInventory inv = player.GetComponent<PlayerInventory>();
+            QuestManager qm = FindObjectOfType<QuestManager>();
+            Quest currentQuest = qm != null ? qm.GetCurrentQuest() : null;
+
+            // Nếu Quest 2 và có nhẫn → cutscene ending
+            if (currentQuest != null && currentQuest.questName == "Tìm nhẫn của mẹ" && inv != null && inv.HasItem("Ring"))
+            {
+                FindObjectOfType<CutsceneController>().TriggerEndingCutscene();
+                return;
+            }
+
+            // Các trường hợp khác → cutscene chết
+            FindObjectOfType<CutsceneController>().TriggerDeathCutscene();
         }
+    }
+
+
+    public void SetSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+        if (animator != null) animator.SetFloat("Speed", moveSpeed);
+    }
+    public void SetQuest2Behavior()
+    {
+        // Tăng tốc độ tuần tra
+        moveSpeed = chaseSpeed; // hoặc gấp đôi tốc độ tuần tra
+
+        // Giảm thời gian dừng
+        waitTime = Mathf.Max(0.5f, waitTime - 1f);
     }
 
 }

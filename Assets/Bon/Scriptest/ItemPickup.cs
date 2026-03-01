@@ -3,9 +3,10 @@ using UnityEngine.InputSystem;
 
 public class ItemPickup : MonoBehaviour
 {
+    [Header("===== Thiết lập Item =====")]
     [SerializeField] private string itemName = "DefaultItem";
-    [SerializeField] private GameObject pressEUI; // UI chữ E
-    [SerializeField] private float pickupRange = 3f; // phạm vi hiển thị E
+    [SerializeField] private GameObject pressEUI;
+    [SerializeField] private float pickupRange = 3f;
 
     private Transform player;
     private PlayerInventory inventory;
@@ -15,15 +16,12 @@ public class ItemPickup : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         inventory = player.GetComponent<PlayerInventory>();
-
-        if (pressEUI != null)
-            pressEUI.SetActive(false); // ẩn lúc đầu
+        if (pressEUI != null) pressEUI.SetActive(false);
     }
 
     void Update()
     {
         if (isPicked || player == null) return;
-
         float dist = Vector3.Distance(player.position, transform.position);
 
         if (dist <= pickupRange)
@@ -31,29 +29,22 @@ public class ItemPickup : MonoBehaviour
             if (pressEUI != null)
             {
                 pressEUI.SetActive(true);
-                // UI xoay theo camera
                 pressEUI.transform.LookAt(Camera.main.transform);
-                pressEUI.transform.Rotate(0, 180, 0); // xoay ngược để chữ không bị ngược
+                pressEUI.transform.Rotate(0, 180, 0);
             }
 
             if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             {
-                bool pickedUp = inventory.AddItem(itemName);
-                if (pickedUp)
+                if (inventory.AddItem(itemName))
                 {
-                    Debug.Log("Player đã nhặt: " + itemName);
                     isPicked = true;
                     if (pressEUI != null) pressEUI.SetActive(false);
                     Destroy(gameObject);
                 }
             }
         }
-        else
-        {
-            if (pressEUI != null) pressEUI.SetActive(false);
-        }
+        else if (pressEUI != null) pressEUI.SetActive(false);
     }
-
 
     void OnDrawGizmosSelected()
     {
@@ -65,7 +56,6 @@ public class ItemPickup : MonoBehaviour
     {
         inventory.AddItem(itemName);
         Destroy(gameObject);
-        return true; // ✅ nhặt thành công
+        return true;
     }
-
 }

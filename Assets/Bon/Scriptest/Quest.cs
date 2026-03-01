@@ -5,20 +5,21 @@ public class Quest
 {
     public string questName;        // tên nhiệm vụ
     public string description;      // mô tả nhiệm vụ
-    public int targetCount;         // số lượng cần hoàn thành (ví dụ 6)
-    public int currentCount;        // số lượng hiện tại (ví dụ 0)
+    public int targetCount;         // số lượng cần hoàn thành
+    public int currentCount;        // số lượng hiện tại
     public bool isCompleted;        // trạng thái hoàn thành
+    public bool isFinalQuest;       // đánh dấu nhiệm vụ cuối cùng
 
-    public Quest(string name, string desc, int target)
+    public Quest(string name, string desc, int target, bool final = false)
     {
         questName = name;
         description = desc;
         targetCount = target;
         currentCount = 0;
         isCompleted = false;
+        isFinalQuest = final;
     }
 
-    // thêm tiến trình
     public void AddProgress(int amount = 1)
     {
         if (isCompleted) return;
@@ -31,14 +32,12 @@ public class Quest
         }
     }
 
-    // reset nhiệm vụ
     public void ResetQuest()
     {
         currentCount = 0;
         isCompleted = false;
     }
 
-    // lấy text hiển thị
     public string GetQuestText()
     {
         if (!isCompleted)
