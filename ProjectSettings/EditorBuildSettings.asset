@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Bon/Scence/Final.unity
     guid: d5580d3cbc4e2b94ab7b7f788929984f
+  - enabled: 1
+    path: Assets/Bon/Scence/Tutorial.unity
+    guid: 9aeaecaa7cf45334199d3ad446b76862
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -89,9 +89,30 @@ public class EnemyVision : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(origin, dirToPlayer, out hit, dist))
             {
-                if (hit.transform == player && playerAction.enemyBusy)
+                if (hit.transform == player)
                 {
-                    if (!isChasing) StartChase();
+                    QuestManager qm = FindObjectOfType<QuestManager>();
+                    if (qm != null)
+                    {
+                        // Quest 1: chỉ chase nếu player có đồ
+                        if (qm.CurrentQuestNumber == 1)
+                        {
+                            if (playerAction.enemyBusy)
+                            {
+                                if (!isChasing) StartChase();
+                            }
+                            else StopChase();
+                        }
+                        // Quest 2: chase luôn, không cần đồ
+                        else if (qm.CurrentQuestNumber == 2)
+                        {
+                            if (!isChasing) StartChase();
+                        }
+                        else
+                        {
+                            StopChase();
+                        }
+                    }
                 }
                 else StopChase();
             }
@@ -147,24 +168,22 @@ public class EnemyVision : MonoBehaviour
                 return;
             }
 
-            // Các trường hợp khác → cutscene chết
+            // Các trường hợp khác → cutscene chết ngay lập tức
             FindObjectOfType<CutsceneController>().TriggerDeathCutscene();
         }
     }
-
 
     public void SetSpeed(float newSpeed)
     {
         moveSpeed = newSpeed;
         if (animator != null) animator.SetFloat("Speed", moveSpeed);
     }
+
     public void SetQuest2Behavior()
     {
         // Tăng tốc độ tuần tra
-        moveSpeed = chaseSpeed; // hoặc gấp đôi tốc độ tuần tra
-
+        moveSpeed = chaseSpeed;
         // Giảm thời gian dừng
         waitTime = Mathf.Max(0.5f, waitTime - 1f);
     }
-
 }

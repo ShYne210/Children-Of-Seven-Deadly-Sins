@@ -6,7 +6,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadGameOver()
     {
         Debug.Log("Loading Final Scene");
-        SceneManager.LoadScene("Final");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void LoadEnding()

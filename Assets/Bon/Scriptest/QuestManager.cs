@@ -10,6 +10,12 @@ public class QuestManager : MonoBehaviour
 
     private int currentQuest = 1;
 
+    // Property public để EnemyVision đọc số quest hiện tại
+    public int CurrentQuestNumber
+    {
+        get { return currentQuest; }
+    }
+
     void Start()
     {
         if (ringItem != null) ringItem.SetActive(false);
