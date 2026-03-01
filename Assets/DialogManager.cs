@@ -19,6 +19,9 @@ public class DialogManager : MonoBehaviour
     public Button btnChoice1;
     public Button btnChoice2;
 
+    [Header("Audio")]
+    public CutsceneBGM cutsceneBGM;
+
     [Header("MAIN DIALOG")]
     [TextArea(3,6)]
     public string[] mainDialogs;
@@ -226,11 +229,16 @@ public class DialogManager : MonoBehaviour
     }
 
     void EndDialog()
+{
+    // Tắt nhạc cutscene
+    if (cutsceneBGM != null)
     {
-        currentState = State.End;
-        dialogPanel.SetActive(false);
-        choicePanel.SetActive(false);
-
-        Debug.Log("CUTSCENE END - START GAMEPLAY");
+        cutsceneBGM.StopBGM();
     }
+
+    dialogPanel.SetActive(false);
+
+    // Load scene gameplay
+    UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+}
 }
