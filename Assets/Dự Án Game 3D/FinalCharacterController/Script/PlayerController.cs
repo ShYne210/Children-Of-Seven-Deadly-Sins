@@ -36,6 +36,7 @@ namespace DuAnGame3D.FinalCharacterController
 
         private void Update()
         {
+            HandleMovement();
             HandleMouseLook();
             ApplyGravity();
         }
