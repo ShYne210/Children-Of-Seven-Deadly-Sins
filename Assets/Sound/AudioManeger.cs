@@ -5,35 +5,43 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [Header("Audio Sources")]
+    [Header("Audio Source")]
     public AudioSource musicSource;
 
     [Header("Music Clips")]
     public AudioClip menuMusic;
     public AudioClip cutsceneMusic;
-    public AudioClip gameplayMusic; // optional
+    public AudioClip gameplayMusic;
 
-    private string currentScene;
-
-    void Awake()
+    private void Awake()
     {
-        // Singleton để không bị tạo nhiều nhạc
+        // Singleton - chỉ giữ 1 AudioManager duy nhất
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // giữ nhạc khi chuyển scene
+            DontDestroyOnLoad(gameObject); // QUAN TRỌNG: không bị destroy khi đổi scene
         }
         else
         {
             Destroy(gameObject);
             return;
         }
+
+        // Nếu chưa gán AudioSource thì tự lấy
+        if (musicSource == null)
+        {
+            musicSource = GetComponent<AudioSource>();
+        }
     }
 
-    void Start()
+    private void OnEnable()
     {
-        PlayMusicByScene(SceneManager.GetActiveScene().name);
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -41,38 +49,40 @@ public class AudioManager : MonoBehaviour
         PlayMusicByScene(scene.name);
     }
 
-    void PlayMusicByScene(string sceneName)
+    public void PlayMusicByScene(string sceneName)
     {
-        if (currentScene == sceneName) return;
-
-        currentScene = sceneName;
+        if (musicSource == null)
+        {
+            Debug.LogError("Music Source is NULL!");
+            return;
+        }
 
         if (sceneName == "MainMenu")
         {
             PlayMusic(menuMusic);
         }
-        else if (sceneName == "cutscene")
+        else if (sceneName == "Cutscene")
         {
             PlayMusic(cutsceneMusic);
         }
         else if (sceneName == "GameScene")
         {
-            StopMusic(); // hoặc đổi sang gameplayMusic nếu muốn
+            PlayMusic(gameplayMusic);
         }
     }
 
     public void PlayMusic(AudioClip clip)
     {
+        if (clip == null)
+        {
+            Debug.LogWarning("Audio Clip is NULL!");
+            return;
+        }
+
         if (musicSource.clip == clip) return;
 
-        musicSource.Stop();
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.Play();
-    }
-
-    public void StopMusic()
-    {
-        musicSource.Stop();
     }
 }
