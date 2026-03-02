@@ -239,6 +239,6 @@ public class DialogManager : MonoBehaviour
     dialogPanel.SetActive(false);
 
     // Load scene gameplay
-    UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+    UnityEngine.SceneManagement.SceneManager.LoadScene("Map2");
 }
 }

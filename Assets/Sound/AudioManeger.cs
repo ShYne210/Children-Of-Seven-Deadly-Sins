@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
         {
             PlayMusic(cutsceneMusic);
         }
-        else if (sceneName == "GameScene")
+        else if (sceneName == "Map2")
         {
             PlayMusic(gameplayMusic);
         }
